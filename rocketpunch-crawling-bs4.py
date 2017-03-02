@@ -2,7 +2,7 @@ import pandas as pd
 import requests
 from bs4 import BeautifulSoup
 
-df = pd.DataFrame(columns=["company", "link", "description"])
+df = pd.DataFrame(columns=["company", "description", "link"])
 
 for page in range(50):
     response = requests.get("https://www.rocketpunch.com/companies?page={}".format(page))
